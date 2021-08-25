@@ -1,0 +1,25 @@
+<br><br><br>
+<h1>Cập nhật thông tin danh mục sản phẩm</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <mat-card style="margin: 50px 0">
+                <form class="form-create" #f=ngForm (ngSubmit)="f.form.valid&&updateCategory(id)" novalidate>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Category name</mat-label>
+                        <input matInput placeholder="Category name" name="name" [(ngModel)]="categoryForm.value.name">
+                        <mat-icon matSuffix>category</mat-icon>
+                    </mat-form-field>
+                    <br>
+                    <button mat-stroked-button color="accent" class="mat-button-toggle-group btn-outline-primary">Update
+                        <mat-icon color="accent" matSuffix>add_circle_outline</mat-icon>
+                    </button>
+                    <button mat-stroked-button color="accent" class="mat-button-toggle-group btn-outline-primary" (click)="Delete(id)">Delte
+                        <mat-icon color="accent" matSuffix>delete</mat-icon>
+                    </button>
+
+                </form>
+            </mat-card>
+        </div>
+    </div>
+</div>
